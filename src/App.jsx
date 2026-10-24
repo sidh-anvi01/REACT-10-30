@@ -24,13 +24,15 @@ import React, { useState } from 'react'
 import ListRendring from './pages/ListRendring'
 import HomePage from './pages/HomePage'
 import UseEffectEx from './pages/UseEffectEx'
+import ApiIntegration from './pages/ApiIntegration'
 const App = () => {
   const [isLoggedIn, setLoggedIn] = useState(true)
   return (
     //  <ListRendring/>
 
   //  !isLoggedIn ? <HomePage/> :<ListRendring/>
-  <UseEffectEx/>
+  // <UseEffectEx/>
+  <ApiIntegration/>
 
   )
 }
