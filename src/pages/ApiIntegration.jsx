@@ -44,19 +44,26 @@ const ApiIntegration = () => {
 
 
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        fetch("https://jsonplaceholder.typicode.com/users")
+    //     fetch("https://jsonplaceholder.typicode.com/users")
+    //         .then(res => res.json())
+    //         .then(data => setUser(data))
+    //         .catch(err => console.log(err))
+
+    // }, [])
+
+
+
+
+  useEffect(() => {
+
+        fetch("https://dummyjson.com/docs/recipes")
             .then(res => res.json())
             .then(data => setUser(data))
             .catch(err => console.log(err))
 
     }, [])
-
-
-
-
- 
 
     return (
         <div>
@@ -65,10 +72,10 @@ const ApiIntegration = () => {
             <button onClick={() => setCount(count + 1)}>change</button>
 
             {
-                user.map((u) => (
+                recipes.user.map((u) => (
                     <div key={u.id}>
                         <h1>{u.name}</h1>
-                        <h1>{u.email}</h1>
+                        {/* <h1>{u.email}</h1> */}
                     </div>
                 ))
             }

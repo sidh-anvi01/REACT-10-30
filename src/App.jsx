@@ -25,6 +25,7 @@ import ListRendring from './pages/ListRendring'
 import HomePage from './pages/HomePage'
 import UseEffectEx from './pages/UseEffectEx'
 import ApiIntegration from './pages/ApiIntegration'
+import AppRoutes from './routes/AppRoutes'
 const App = () => {
   const [isLoggedIn, setLoggedIn] = useState(true)
   return (
@@ -32,7 +33,8 @@ const App = () => {
 
   //  !isLoggedIn ? <HomePage/> :<ListRendring/>
   // <UseEffectEx/>
-  <ApiIntegration/>
+  // <ApiIntegration/>
+  <AppRoutes/>
 
   )
 }
