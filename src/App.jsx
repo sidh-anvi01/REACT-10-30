@@ -26,6 +26,9 @@ import HomePage from './pages/HomePage'
 import UseEffectEx from './pages/UseEffectEx'
 import ApiIntegration from './pages/ApiIntegration'
 import AppRoutes from './routes/AppRoutes'
+import UserPage from './pages/UserPage'
+import { UserProvider } from './context/UserContext'
+import SettingPage from './pages/SettingPage'
 const App = () => {
   const [isLoggedIn, setLoggedIn] = useState(true)
   return (
@@ -34,7 +37,12 @@ const App = () => {
   //  !isLoggedIn ? <HomePage/> :<ListRendring/>
   // <UseEffectEx/>
   // <ApiIntegration/>
-  <AppRoutes/>
+  // <AppRoutes/>
+  <UserProvider>
+
+  <UserPage/>
+  <SettingPage/>
+  </UserProvider>
 
   )
 }
